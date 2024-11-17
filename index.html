@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DataVista</title>
+  <title>DataVista Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
     <h1>DataVista Dashboard</h1>
   </header>
   <main>
-    <canvas id="salesChart"></canvas>
+    <section class="metrics">
+      <div class="metric-box">
+        <h2>Date</h2>
+        <p id="current-date">2024-11-17</p>
+      </div>
+      <div class="metric-box">
+        <h2>Days</h2>
+        <p id="days">15</p>
+      </div>
+      <div class="metric-box">
+        <h2>Forecasted Sales</h2>
+        <p id="total-sales">780</p>
+      </div>
+    </section>
+    <section class="charts">
+      <canvas id="lineChart"></canvas>
+      <canvas id="donutChart"></canvas>
+    </section>
   </main>
-  <footer>
-    <p>Powered by AIvariant</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
